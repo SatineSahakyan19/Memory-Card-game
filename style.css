@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("images/24996_kgo-windows-bliss-040714-1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gamestarted {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    width: 400px;
+    background-color: rgba(95, 93, 93, 0.48);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+#gamestarted   > label {
+    font-size: 40px;
+    color: #ffffff92;
+}
+#cardcount,#start-game{
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#game-board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#game-board {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 60px;
+    justify-content: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    position: relative; 
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+.card .front, .card .back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.card .front {
+    background-color: #3333339d;
+    color: white;
+}
+.card .back {
+    transform: rotateY(180deg);
+}
+.playagain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#play-again{
+    color: rgba(255, 255, 255, 0.678);
+    font-size: 30px;
+    border-radius: 10px;
+    height: auto;
+    width: 300px;
+    background-color: rgba(95, 93, 93, 0.48);
+}
+#again{
+    padding: 11px;
+    border-radius: 10px;
+}

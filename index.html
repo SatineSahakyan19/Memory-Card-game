@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div  id="gamestarted">
+      <label for="cardcount">Select number of cards</label>
+      <div>
+        <input type="number" id="cardcount" min="2"  value="4" />
+        <button id="start-game">Start Game</button>
+      </div>
+    </div>
+    <div id="game-board"></div>
+    <div class="playagain">
+      <div id="play-again" style="display:none;">
+        <h2>YOU WIN!</h2>
+        <button id="again">Play Again</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
